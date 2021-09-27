@@ -36,7 +36,9 @@ public class greetingsContainer {
 	@GetMapping(value = "/greetWithName")
 	public String greetName(@RequestParam String name) {
 		greet = new greetMessages("Hi GoodAfterNoon");
-		return name + " " + greet.getS1() ;
+		List<String> format = new ArrayList<>();
+		format.add(name + " " + greet.getS1());
+		return format.get(0) ;
 	}
 	
 
