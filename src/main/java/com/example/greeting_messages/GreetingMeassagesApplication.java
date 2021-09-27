@@ -1,4 +1,4 @@
-package com.example.db_practise;
+package com.example.greeting_messages;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
