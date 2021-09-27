@@ -33,13 +33,19 @@ public class greetingsContainer {
 		return sLayer.hi();
 	}
 	
+	public static List<String> format; 
+
 	@GetMapping(value = "/greetWithName")
 	public String greetName(@RequestParam String name) {
 		greet = new greetMessages("Hi GoodAfterNoon");
-		List<String> format = new ArrayList<>();
+		format = new ArrayList<>();
 		format.add(name + " " + greet.getS1());
+		format.add("Dev" + " " + greet.getS1());
 		return format.get(0) ;
 	}
 	
-
+	@GetMapping("/retrive")
+	public List<String> retr(){
+		return format;
+	}
 }
